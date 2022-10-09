@@ -1,0 +1,455 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+
+﻿body, html {
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+overflow: hidden;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs a {
+  color: #666;
+  text-decoration: none;
+}
+
+input {
+  font: 16px/26px "Raleway", sans-serif;
+}
+
+body {
+  color: #666;
+  background-color: #f1f2f2;
+  font: 16px/26px "Raleway", sans-serif;
+}
+
+.form-wrap {
+  background-color: #fff;
+  width: 320px;
+  margin: 3em auto;
+  box-shadow: 0px 1px 8px #BEBEBE;
+  -webkit-box-shadow: 0px 1px 8px #BEBEBE;
+  -moz-box-shadow: 0px 1px 8px #BEBEBE;
+}
+
+.form-wrap .tabs {
+  overflow: hidden;
+}
+
+.form-wrap .tabs h3 {
+  float: left;
+  width: 50%;
+}
+
+.form-wrap .tabs h3 a {
+  padding: 0.5em 0;
+  text-align: center;
+  font-weight: 400;
+  background-color: #e6e7e8;
+  display: block;
+  color: #666;
+}
+
+.form-wrap .tabs h3 a.active {
+  background-color: #fff;
+}
+
+.form-wrap .tabs-content {
+  padding: 1.5em;
+}
+
+.form-wrap .tabs-content div[id$="tab-content"] {
+  display: none;
+}
+
+.form-wrap .tabs-content .active {
+  display: block !important;
+}
+
+.form-wrap form .input {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  padding: .8em 0 10px .8em;
+  border: 1px solid #CFCFCF;
+  outline: 0;
+  display: inline-block;
+  margin: 0 0 .8em 0;
+  padding-right: 2em;
+  width: 100%;
+}
+
+.form-wrap form .button {
+  width: 100%;
+  padding: .8em 0 10px .8em;
+  background-color: #28A55F;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.form-wrap form .button:hover {
+  background-color: #4FDA8C;
+}
+
+
+/* message area */
+.top {
+  height: 130px;
+  width: 100%;
+  background-color: #009688;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  }
+  
+  .chatbox {
+  height: calc(100vh - 40px);
+  width: 95%;
+  margin-top: 20px;
+  padding: 0;
+  }
+  
+  .profile-pic {
+  height: 40px;
+  width: 40px;
+  border: 2px solid #d8d3d3;
+  }
+  
+  .form-rounded {
+  border-radius: 5px;
+  }
+  
+  .bgColorOfLi{
+  background-color:#f8f8f8;
+  }
+  
+  .friend-pic {
+  height: 50px;
+  width: 50px;
+  margin-left: -10px;
+  border: 2px solid #d8d3d3;
+  }
+  
+  .name {
+  font-weight: bold;
+  color: #000;
+  font-size: 18px;
+  margin-left: 5px;
+  }
+  
+  .under-name {
+  font-size: 12px;
+  max-height: 15px;
+  word-spacing: 5px;
+  }
+  
+  .icon {
+  font-size: 20px;
+  color: #9CA1A3;
+  cursor: pointer;
+  }
+  
+  .chat-pic {
+  height: 30px;
+  width: 30px;
+  border: 2px solid #d8d3d3;
+  }
+  
+  .receive {
+  background-color: lightgreen;
+  border-radius: 0px  10px 10px 20px;
+  padding: 8px 15px 5px 15px;
+  display: inline-block;
+  margin-top: 8px;
+  }
+
+  .receive span{
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .sent {
+  background-color: whitesmoke;
+  border-radius: 0px  10px 10px 20px;
+  padding: 8px 15px 5px 15px;
+  display: inline-block;
+  margin-top: 8px;
+  }
+
+  
+  .time {
+  font-size: 10px;
+  color: #9CA1A3;
+  margin-left: 5px;
+  margin-top: 10px;
+  }
+
+  .imgWrapper{
+    margin-top: 5px;
+    border: 5px solid whitesmoke;
+  }
+  
+  .card {
+  height: 94vh;
+  }
+  
+  #messages {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  }
+  
+  #lstChat {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  }
+  
+  .dropdown-toggle::before {
+  display: none !important;
+  }
+  
+  .dropdown-toggle::after {
+  display: none !important;
+  }
+  
+  #emoji {
+  position: absolute;
+  top: -30vh;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0,0,0,0.23) 0px 3px 6px;
+  }
+  
+  #emoji #myTabContent {
+      height: 20vh;
+  }
+  
+  #myTabContent a {
+  text-decoration: none;
+  }
+  
+  #notification {
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: -10%;
+  font-size: 12px;
+  width: 30%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-left: -12%;
+  }
+  
+  .left-list{
+  overflow-y: scroll;
+  }
+  
+  
+  .message-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  }
+  
+  .message-container::-webkit-scrollbar {
+  display: none;
+  }
+
+
+
+/* style audio */
+
+audio::-webkit-media-controls-panel {
+	background-color: whitesmoke;
+	border: 2px solid red;
+  }
+
+  audio{
+    max-height: 100%;
+    max-width: 100%;
+    min-width: 200px;
+    margin: auto;
+    margin-top: 8px;
+    object-fit: contain;
+  }
+
+  .recieve-audio audio::-webkit-media-controls-panel {
+    background-color: lightgreen;
+    border: 2px solid red;
+    }
+
+  video{
+    margin-top: 5px;
+  }
+
+
+.left-top{
+  display: flex;
+  align-items: center;
+}
+
+.left-top span{
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+
+/* modal style */
+
+.modal{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content{
+  width: 300px;
+  background-color: #fff;
+}
+
+.modal-header{
+  margin: auto;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.modal-body{
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-input{
+  width: 80%;
+  margin: auto;
+}
+
+.set-Micro{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.set-Micro span{
+  margin-left: 10px;
+  color: green;
+  font-size: 10px;
+}
+
+i{
+  color: #0b1a0e;
+}
+
+.cardDiv{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardDiv div i{
+  margin-right: 10px;
+}
+
+.cardDiv2{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+
+#container {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  /* background: rgb(197, 13, 13); */
+}
+#name {
+  /* width: 100%; */
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+
+#containerforbody {
+  margin-top: 10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+  /* background: rgb(197, 13, 13); */
+}
+#nameforbody {
+  /* width: 100%; */
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  line-height: 32px;
+  font-weight: bold;
+}
